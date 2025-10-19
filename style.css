@@ -1,0 +1,73 @@
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#0b74ff;
+  --radius:12px;
+  --gap:1rem;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+
+.profile-card{
+  width:100%;
+  max-width:720px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 20px rgba(2,6,23,0.08);
+  padding:1.25rem;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:var(--gap);
+}
+
+/* header area */
+.profile-card__header{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.profile-card__avatar{
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:2px solid #e6eef9;
+}
+.profile-card__meta h2{font-size:1.125rem;margin:0}
+.profile-card__meta .role{color:var(--muted);font-size:0.9rem;margin-top:0.25rem}
+
+/* body */
+.profile-card__body p{margin-top:0.75rem;line-height:1.45;color:var(--muted)}
+.time{font-size:0.9rem;color:var(--muted)}
+
+/* lists */
+.social-list{list-style:none;padding:0;display:flex;gap:0.75rem;margin:0.5rem 0}
+.social-list a{display:inline-block;text-decoration:none;padding:0.35rem 0.6rem;border-radius:6px;border:1px solid #eaeef6;font-size:0.9rem;color:var(--accent)}
+.hobbies ul, .dislikes ul{margin:0.5rem 0 0 1rem}
+
+/* footer */
+.profile-card__footer{display:flex;justify-content:flex-end}
+.contact-btn{background:var(--accent);color:#fff;border:none;padding:0.55rem 0.9rem;border-radius:8px;cursor:pointer;font-weight:600}
+.contact-btn:focus-visible, a:focus-visible{outline:3px solid rgba(11,116,255,0.2);outline-offset:2px}
+
+/* Desktop layout */
+@media (min-width:700px){
+  .profile-card{grid-template-columns:220px 1fr;align-items:start}
+  .profile-card__header{flex-direction:column;align-items:center}
+  .profile-card__meta{text-align:left}
+  .profile-card__footer{align-self:end}
+}
