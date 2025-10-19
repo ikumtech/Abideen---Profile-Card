@@ -3,11 +3,18 @@
 
 A semantic accessible and responsive profile card built using simple - HTML, CSS and Vanilla JS. for Stage 0 Frontend Task for HNG Internship 
 
-## Installation
-Instructions for setting up your project.
+## How to Run Locally
 
-## Usage
-How to run or use your app.
+1. **Clone the repository:**
+```bash
+git clone https://github.com/ikumtech/Abideen---Profile-Card.git
+
+
+2. Go into your project FOlder : 
+cd Abideen---Profile-Card
+Open index.html in your browser
+
+Double-click it or right-click → Open With → your browser.
 
 
 ##  Features
@@ -18,7 +25,8 @@ How to run or use your app.
 
 
 ## Live Demo
-[View on GitHub Pages](https://<your-username>.github.io/profile-card)
+[View on GitHub Pages](https://github.com/ikumtech/Abideen---Profile-Card)
+[View on LIve](https://ikumtechprofilecared.netlify.app/)
 
 
 Tech Stack Used: 
