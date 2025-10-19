@@ -1,70 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Profile Card</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card | Abideen Ikumogunniyi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="theme-toggle">Dark Mode</button>
 
-        <main role="main" aria-labelledby="profile-heading">
-            <article class="profile-card" data-testid="test-profile-card">
-                <header class="profile-card__header">
-                    <figure class="profile-card__avatar-figure">
-                        <img
-                            src="../Img/pic1.jpg"
-                            alt="Profile photo of Abideen"
-                            data-testid="test-user-avatar"
-                            class="profile-card__avatar"
-                        />
-                    </figure>
-                    <div class="profile-card__meta">
-                        <h2 id="profile-heading" data-testid="test-user-name">Abideen Ikumogunniyi</h2>
-                        <p class="role" data-testid="test-user-role">Frontend Developer</p>
-                    </div>
-                </header>
+    <main role="main" aria-labelledby="profile-heading">
+      <article class="profile-card" data-testid="test-profile-card">
+        <header class="profile-card__header">
+          <figure class="profile-card__avatar-figure">
+            <img
+              src="./Img/pic1.jpg"
+              alt="Profile photo of Abideen Ikumogunniyi"
+              data-testid="test-user-avatar"
+              class="profile-card__avatar"
+            />
+          </figure>
+          <div class="profile-card__meta">
+            <h2 id="profile-heading" data-testid="test-user-name">
+              Abideen Ikumogunniyi
+            </h2>
+            <p class="role" data-testid="test-user-role">
+              Frontend Developer
+            </p>
+          </div>
+        </header>
 
-                <section class="profile-card__body">
-                    <p data-testid="test-user-bio">
-                        A frontend Developer with kin interest in making accesiblity website
-                    </p>
+        <section class="profile-card__body">
+          <p data-testid="test-user-bio">
+            A Frontend Developer passionate about accessibility and crafting
+            responsive user interfaces with modern web standards.
+          </p>
 
-                    <p class="time">
-                        Current time (ms): <span data-testid="test-user-time">loading…</span>
-                    </p>
-                    <p> Connect with ME:</p>
-                    <nav aria-label="Social links" data-testid="test-user-social-links">
-                        <ul class="social-list">
-                        <li><a href="https://www.linkedin.com/in/ikumogunniyi-abideen-5a2337195/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
-                        </ul>
-                    </nav>
+          <p class="time">
+            Current time (ms):
+            <span data-testid="test-user-time">loading…</span>
+          </p>
 
-                    <section aria-labelledby="hobbies-heading" data-testid="test-user-hobbies" class="hobbies">
-                        <h3 id="hobbies-heading">Hobbies</h3>
-                        <ul>
-                        <li>Video Game</li>
-                        <li>Photography</li>
-                        <li>Cooking</li>
-                        </ul>
-                    </section>
+          <p>Connect with me:</p>
+          <nav aria-label="Social links" data-testid="test-user-social-links">
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/ikumogunniyi-abideen-5a2337195/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ikumtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-                    <section aria-labelledby="dislikes-heading" data-testid="test-user-dislikes" class="dislikes">
-                        <h3 id="dislikes-heading">Dislikes</h3>
-                        <ul>
-                        <li>Spam email</li>
-                        <li>No Caffeine Drink</li>
-                        </ul>
-                    </section>
-                </section>
+          <section
+            aria-labelledby="hobbies-heading"
+            data-testid="test-user-hobbies"
+            class="hobbies"
+          >
+            <h3 id="hobbies-heading">Hobbies</h3>
+            <ul>
+              <li>Video Games</li>
+              <li>Photography</li>
+              <li>Cooking</li>
+            </ul>
+          </section>
 
-                <footer class="profile-card__footer">
-                <button class="contact-btn" data-testid="test-user-contact">Contact</button>
-                </footer>
-            </article>
-        </main>
+          <section
+            aria-labelledby="dislikes-heading"
+            data-testid="test-user-dislikes"
+            class="dislikes"
+          >
+            <h3 id="dislikes-heading">Dislikes</h3>
+            <ul>
+              <li>Spam Emails</li>
+              <li>No Caffeine Drinks</li>
+            </ul>
+          </section>
+        </section>
 
+        <footer class="profile-card__footer">
+          <button class="contact-btn" data-testid="test-user-contact">
+            Contact
+          </button>
+        </footer>
+      </article>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>

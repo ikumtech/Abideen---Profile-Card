@@ -1,73 +1,162 @@
-:root{
-  --bg:#f4f6f8;
-  --card:#ffffff;
-  --text:#111827;
-  --muted:#6b7280;
-  --accent:#0b74ff;
-  --radius:12px;
-  --gap:1rem;
+:root {
+  --bg: linear-gradient(135deg, #e0e7ff, #f9fafb);
+  --card: #ffffffcc; /* subtle transparency */
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 16px;
+  --gap: 1rem;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background:var(--bg);
-  color:var(--text);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:1rem;
+* {
+  box-sizing: border-box;
 }
 
-.profile-card{
-  width:100%;
-  max-width:720px;
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:0 6px 20px rgba(2,6,23,0.08);
-  padding:1.25rem;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:var(--gap);
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-/* header area */
-.profile-card__header{
-  display:flex;
-  gap:1rem;
-  align-items:center;
+body {
+  font-family: Inter, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
-.profile-card__avatar{
-  width:84px;
-  height:84px;
-  border-radius:50%;
-  object-fit:cover;
-  flex-shrink:0;
-  border:2px solid #e6eef9;
+
+/* Profile Card */
+.profile-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.profile-card__meta h2{font-size:1.125rem;margin:0}
-.profile-card__meta .role{color:var(--muted);font-size:0.9rem;margin-top:0.25rem}
 
-/* body */
-.profile-card__body p{margin-top:0.75rem;line-height:1.45;color:var(--muted)}
-.time{font-size:0.9rem;color:var(--muted)}
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
 
-/* lists */
-.social-list{list-style:none;padding:0;display:flex;gap:0.75rem;margin:0.5rem 0}
-.social-list a{display:inline-block;text-decoration:none;padding:0.35rem 0.6rem;border-radius:6px;border:1px solid #eaeef6;font-size:0.9rem;color:var(--accent)}
-.hobbies ul, .dislikes ul{margin:0.5rem 0 0 1rem}
+/* Header */
+.profile-card__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
-/* footer */
-.profile-card__footer{display:flex;justify-content:flex-end}
-.contact-btn{background:var(--accent);color:#fff;border:none;padding:0.55rem 0.9rem;border-radius:8px;cursor:pointer;font-weight:600}
-.contact-btn:focus-visible, a:focus-visible{outline:3px solid rgba(11,116,255,0.2);outline-offset:2px}
+.profile-card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
 
-/* Desktop layout */
-@media (min-width:700px){
-  .profile-card{grid-template-columns:220px 1fr;align-items:start}
-  .profile-card__header{flex-direction:column;align-items:center}
-  .profile-card__meta{text-align:left}
-  .profile-card__footer{align-self:end}
+.profile-card__meta h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.profile-card__meta .role {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* Body */
+.profile-card__body p {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.time {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* Lists */
+.social-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.social-list a {
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background-color: #eff6ff;
+  transition: all 0.2s ease;
+}
+
+.social-list a:hover {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.hobbies ul, .dislikes ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+/* Footer */
+.profile-card__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.contact-btn:hover {
+  background: #1d4ed8;
+}
+
+.contact-btn:focus-visible, a:focus-visible {
+  outline: 3px solid rgba(11, 116, 255, 0.3);
+  outline-offset: 3px;
+}
+
+/* Responsive Layout */
+@media (min-width: 700px) {
+  .profile-card {
+    grid-template-columns: 240px 1fr;
+    align-items: start;
+  }
+
+  .profile-card__header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card__meta {
+    text-align: center;
+  }
 }
